@@ -1,6 +1,6 @@
 services:
   web:
-    build: ./springboot-app2
+    #build: ./springboot-app2
     image: moonimax/springboot2-web2:2.0
     container_name: springboot_app2
     ports:
