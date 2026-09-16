@@ -19,6 +19,13 @@ public String hello() {
 return "<body bgcolor=yellow> changed!!!!! ----- </body>";
 }
 
+
+@GetMapping("/red")
+public String hello2() {
+return "<body bgcolor=red> changed!!!!! ----- </body>";
+}
+
+
 @GetMapping("/mysql")
 public String dbTest() {
 try {
@@ -31,6 +38,22 @@ e.printStackTrace();
 return "Database connection failed! Error: " + e.getMessage();
 }
 }
+
+
+@GetMapping("/mysql2")
+public String dbTest2() {
+try {
+String sql = "CREATE TABLE member(id INT, pw INT); SELECT * id FROM memeber;";
+String result = jdbcTemplate.queryForObject(sql, String.class);
+return "Database test successful. The result of '1 + 1' is: " +
+result;
+} catch (Exception e) {
+e.printStackTrace();
+return "Database connection failed! Error: " + e.getMessage();
+}
+}
+
+
 
 @GetMapping("/redis-set")
 public String redisSet() {
