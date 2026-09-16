@@ -67,6 +67,7 @@ jobs:
             # (Docker Hub 레포가 비공개일 때만 주석 해제)
             # echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
+
             echo "===== 최신 이미지 pull ====="
             docker compose pull
 
