@@ -16,7 +16,7 @@ private StringRedisTemplate redis;
 
 @GetMapping("/")
 public String hello() {
-return "Spring Boot START PAGE";
+return "<body bgcolor=yellow> changed!!!!! ----- </body>";
 }
 
 @GetMapping("/mysql")
